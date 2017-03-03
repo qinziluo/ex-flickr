@@ -28,11 +28,30 @@ exercise.addPhotos = function(data){
     document.getElementById('images').innerHTML = html;
 };
 
+
+
 exercise.buildHtmlForImages = function(data){
+    //console.log(data);
+    //console.log(data.photos.photo[0].url_s);
+    var imageTags="";
+    data.photos.photo.forEach(function(abc){
+        imageTags += '<img src="'+ abc.url_s+'">';
+
+    });
+    //console.log(imageTags);
+    return imageTags;
+
+
 
     // ------------------------------------------------
     //   YOUR CODE
     //     use forEach to construct html to
     //     display every image in flickr data
     // ------------------------------------------------
+
+
+
+
+
+
 };
